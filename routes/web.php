@@ -13,10 +13,6 @@
 |
 */
 
-$router->get('/', function () {
-    return 1;
-});
-
 $router->group(['prefix' => 'api'], function () use ($router) {
     $router->group(['prefix' => 'user'], function () use ($router) {
         $router->post('register', 'AuthController@registerUser');
